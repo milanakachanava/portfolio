@@ -7,11 +7,12 @@ const email = 'milana.kachanava@gmail.com';
 ---
 <Base>
   <div class="stream" id="work">
-    {work.map((w) => (
+    {work.map((w, i) => (
       <a class="project" href={`/work/${w.id}/`}>
         <div class="shot"><img src={`/work/${w.id}/cover.webp`} alt={w.data.title} loading="lazy" /></div>
         <div class="info">
           <div>
+            <span class="num">{String(i + 1).padStart(2, '0')} / {String(work.length).padStart(2, '0')}</span>
             <h2>{w.data.title}</h2>
             <div class="meta">
               {w.data.company}: {w.data.tags.slice(0, 2).join(', ')}<br />

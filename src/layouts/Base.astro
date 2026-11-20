@@ -34,8 +34,9 @@ const stats = [
     <div class="shell">
       <aside class="side">
         <div class="side-inner">
+          <div class="coords"><span>52°13′ N 21°01′ E</span><span>Warsaw · <span id="clock">CET</span></span></div>
           <a class="me" href="/">
-            <span class="name">Milana Kachanava</span>
+            <span class="name">Milana<br />Kachanava</span>
             <span class="role">Senior Product Designer</span>
           </a>
 
@@ -67,5 +68,10 @@ const stats = [
         </footer>
       </main>
     </div>
+    <script>
+      const el = document.getElementById('clock');
+      const tick = () => { if (el) el.textContent = new Intl.DateTimeFormat('en-GB', { timeZone: 'Europe/Warsaw', hour: '2-digit', minute: '2-digit' }).format(new Date()); };
+      tick(); setInterval(tick, 30000);
+    </script>
   </body>
 </html>
