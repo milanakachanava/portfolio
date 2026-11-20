@@ -16,7 +16,7 @@ tldr:
   result: SuperProtect reached a paid release in 9 months and won its first 50 customers. In follow-up interviews, shippers were using the flags to choose carriers.
 ---
 
-<figure><div class="ph">Hero image: the carrier profile with the SuperProtect status</div></figure>
+<figure><img src="/work/superprotect/cover.webp" alt="SuperProtect: better protection on every load" loading="lazy" /></figure>
 
 ## My role
 
@@ -39,6 +39,12 @@ A shipper has to decide whom to trust with a car. The information they need was 
 - An analysis of carrier records: company information, authority status, safety ratings, cargo insurance, ratings and performance. I worked through the source data with Claude and grouped it into the sections a shipper actually needs.
 - Heap tracking after release, to see how shippers found, opened and acted on the flags.
 
+<figure><img src="/work/superprotect/shipper-interview.webp" alt="Shipper research interview reviewing carrier records" loading="lazy" /><figcaption>A shipper interview about vetting carriers, participant names blurred.</figcaption></figure>
+
+<figure class="grid2"><img src="/work/superprotect/mycarrierportal.webp" alt="Carrier profile in MyCarrierPortal with a risk assessment" loading="lazy" /><img src="/work/superprotect/fmcsa-safer.webp" alt="FMCSA SAFER company snapshot" loading="lazy" /><img src="/work/superprotect/fmcsa-licensing.webp" alt="FMCSA licensing and insurance record" loading="lazy" /><img src="/work/superprotect/authority-data.webp" alt="Carrier authority and safety data marked up during research" loading="lazy" /><figcaption>What shippers check today: MyCarrierPortal, FMCSA SAFER, FMCSA licensing and insurance, and carrier records marked up during research.</figcaption></figure>
+
+<figure><img src="/work/superprotect/inspiration.webp" alt="Inspiration board for risk and trust interfaces" loading="lazy" /><figcaption>How other products communicate trust, risk and account health.</figcaption></figure>
+
 ## Design decisions
 
 <div class="decision">
@@ -53,7 +59,7 @@ A shipper has to decide whom to trust with a car. The information they need was 
 
 </div>
 
-<figure><div class="ph">Before: the external sources a shipper checks · After: one carrier profile in sections</div></figure>
+<figure class="tall"><img src="/work/superprotect/profile-full.webp" alt="The restructured carrier profile with compliance, insurance, performance and company information" loading="lazy" /><figcaption>The restructured carrier profile: compliance, insurance, performance and company information in one view.</figcaption></figure>
 
 <div class="decision">
 
@@ -69,7 +75,9 @@ A shipper has to decide whom to trust with a car. The information they need was 
 
 We grouped the checks into three categories: activity on Super Dispatch, entity and registration information, and FMCSA compliance. The status shows <b>Passed</b> when all checks succeed and <b>Failed</b> when a high-risk issue needs review.
 
-<figure><div class="ph">The status in the carrier profile and the drawer with every check</div></figure>
+<figure class="grid2"><img src="/work/superprotect/passed-drawer.webp" alt="SuperProtect Passed drawer with successful checks" loading="lazy" /><img src="/work/superprotect/failed-drawer.webp" alt="SuperProtect Failed drawer with checks that need review" loading="lazy" /><figcaption>Passed and Failed: every check behind the status, grouped by activity, entity and registration, and FMCSA compliance.</figcaption></figure>
+
+<figure><img src="/work/superprotect/profile-passed.webp" alt="Carrier profile showing the SuperProtect Passed status" loading="lazy" /><figcaption>The status sits at the top of the carrier profile.</figcaption></figure>
 
 <div class="decision">
 
@@ -83,11 +91,17 @@ We grouped the checks into three categories: activity on Super Dispatch, entity 
 
 </div>
 
-<figure><div class="ph">The status on marketplace search, carrier cards, load requests and offers, and Manage Carriers</div></figure>
+<figure class="grid2"><img src="/work/superprotect/load-requests-light.webp" alt="Carrier requests in light mode with a status on each carrier" loading="lazy" /><img src="/work/superprotect/load-requests-dark.webp" alt="Carrier requests in dark mode with the same statuses" loading="lazy" /><figcaption>Load requests: every carrier arrives with its status, in light and dark mode.</figcaption></figure>
+
+<figure><img src="/work/superprotect/manage-carriers.webp" alt="Manage Carriers list with statuses, contacts and active loads" loading="lazy" /><figcaption>Manage Carriers: the carriers a shipper works with, each with its status, contacts and active loads.</figcaption></figure>
 
 ## From a validated model to a paid product
 
 Once the model had proved useful in real carrier evaluations, we turned it into SuperProtect, a paid product. I designed the subscription and payment experience and placed the offer inside existing workflows, so shippers could discover it while reviewing a carrier, request a demo from the product, and understand the service before subscribing.
+
+<figure class="grid2"><img src="/work/superprotect/contextual-promo.webp" alt="Caution drawer with a contextual SuperProtect offer" loading="lazy" /><img src="/work/superprotect/in-product.webp" alt="SuperProtect page inside the product" loading="lazy" /><img src="/work/superprotect/subscription-promo.webp" alt="Subscription details with a Request Demo action" loading="lazy" /><img src="/work/superprotect/subscription-active.webp" alt="Subscription details with an active SuperProtect plan" loading="lazy" /><figcaption>The offer in context, the in-product page, and subscription before and after purchase.</figcaption></figure>
+
+<figure><img src="/work/superprotect/public-page.webp" alt="Public Super Dispatch page introducing SuperProtect" loading="lazy" /><figcaption>SuperProtect on the public Super Dispatch website.</figcaption></figure>
 
 ## What shipped
 
@@ -106,6 +120,8 @@ Once the model had proved useful in real carrier evaluations, we turned it into 
 </div>
 
 Shippers no longer validate a carrier by hand across external sites. In follow-up interviews, where shippers used the product themselves, they were making booking decisions based on the flags.
+
+<figure><img src="/work/superprotect/heap-usage.webp" alt="Heap chart of SuperProtect flag usage over time" loading="lazy" /><figcaption>Heap tracking of how shippers used the risk flags.</figcaption></figure>
 
 ## What I would measure next
 

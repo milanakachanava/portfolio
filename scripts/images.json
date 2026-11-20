@@ -1,0 +1,55 @@
+{
+  "base": "https://lana-kachanava.com",
+  "cases": {
+    "superprotect": [
+      ["/__l5e/assets-v1/b406d638-6258-449f-afde-52e2e9d18b9e/super-dispatch-hero.png", "cover", "Super Dispatch: Trust & Safety"],
+      ["/__l5e/assets-v1/cbbefa44-33e9-4a16-934d-0fe61cb8e0fa/shipper-interview-blurred.png", "shipper-interview", "Shipper research interview reviewing carrier records, with participant names blurred"],
+      ["/__l5e/assets-v1/69c097fa-ea4a-4d0f-a7ab-547f809824ec/carrier-profile-inspiration.png", "inspiration", "Inspiration board for carrier risk and trust interfaces"],
+      ["/__l5e/assets-v1/fd88a9d9-77fa-487f-96bb-7bb89396d8aa/carrier-profile-authority-data.png", "authority-data", "Carrier company profile with authority, safety rating and environmental data marked up during research"],
+      ["/__l5e/assets-v1/105abe42-e5a9-43d2-a3d2-b29a5dca9a5b/mycarrierportal-risk-assessment.png", "mycarrierportal", "Carrier profile in MyCarrierPortal showing a risk assessment across authority, insurance and operations"],
+      ["/__l5e/assets-v1/cf63e960-daaa-4f75-a6e9-a4bf22e97563/fmcsa-licensing-insurance.png", "fmcsa-licensing", "FMCSA Licensing and Insurance record showing authority status and insurance on file"],
+      ["/__l5e/assets-v1/0f546bf7-6add-4455-ad06-57636cc7373d/fmcsa-safer-company-snapshot.png", "fmcsa-safer", "FMCSA SAFER Company Snapshot showing operating authority, company information and cargo carried"],
+      ["/__l5e/assets-v1/e5b44e59-a8ff-497a-93c8-68db67afeb32/carrier-profile-full.png", "profile-full", "Full restructured carrier profile with compliance, insurance, performance and company information"],
+      ["/__l5e/assets-v1/f71cedd4-082d-49bd-8969-7264acbd4c14/superprotect-passed-drawer.png", "passed-drawer", "SuperProtect Passed drawer showing successful carrier checks"],
+      ["/__l5e/assets-v1/e9f5145d-d6ed-4281-a6f4-bcd650ba9cc9/superprotect-failed-drawer.png", "failed-drawer", "SuperProtect Failed drawer showing carrier checks that require review"],
+      ["/__l5e/assets-v1/5faf859b-5729-47b0-a853-90367611a998/carrier-profile-passed-status.png", "profile-passed", "Carrier profile showing the SuperProtect Passed status"],
+      ["/__l5e/assets-v1/d44ee68b-fb09-46ea-beba-59cb452615bd/load-requests-light.png", "load-requests-light", "Carrier requests panel in light mode with the SuperProtect status on each carrier"],
+      ["/__l5e/assets-v1/97ba2801-de80-464a-888e-9143fa68dd56/load-requests-dark.png", "load-requests-dark", "Carrier requests drawer in dark mode with the same statuses"],
+      ["/__l5e/assets-v1/03f85372-bb4a-4b27-9f4d-e62ea98b73e5/manage-carriers.png", "manage-carriers", "Manage Carriers list with each carrier's SuperProtect status, contact details and active loads"],
+      ["/__l5e/assets-v1/9cabbc70-37d3-4d3b-bc91-70628d3174ef/heap-flags-usage.png", "heap-usage", "Heap chart showing usage of the SuperProtect risk flags over time"],
+      ["/__l5e/assets-v1/10929dda-8c39-4f16-bb1d-01f8b4662e25/subscription-details-active.png", "subscription-active", "Subscription details with an active SuperProtect plan and usage"],
+      ["/__l5e/assets-v1/7944756c-9967-4ba9-9078-729eb959e48b/subscription-details-promotion.png", "subscription-promo", "Subscription details promoting SuperProtect with a Request Demo action"],
+      ["/__l5e/assets-v1/51b0d6d7-4da5-4708-ae6f-00b2a316c3ae/superprotect-in-product.png", "in-product", "SuperProtect promotional page inside the Super Dispatch product"],
+      ["/__l5e/assets-v1/3927e219-4f19-49db-a389-6c4b7f7285e8/carrier-profile-contextual-promotion.png", "contextual-promo", "Carrier profile caution drawer with a contextual SuperProtect promotion"],
+      ["/__l5e/assets-v1/78766bda-56a8-4cc0-9274-2334ed258e55/superprotect-public-page.png", "public-page", "Public Super Dispatch webpage introducing SuperProtect"]
+    ],
+    "onradar": [
+      ["/lovable-uploads/c55b333c-5b6c-4985-8faa-c20f615a6b48.png", "cover", "onRADAR & OOS Platform Ecosystem"],
+      ["/lovable-uploads/b463dc9a-a58f-47c2-9537-79f2f857311c.png", "hero", "onRADAR & OOS Platform Ecosystem"],
+      ["/lovable-uploads/76cb7b7c-9298-47c7-b05d-6f401662c1ad.png", "research", "Research session with operators"],
+      ["/lovable-uploads/9c5ca071-9412-4f86-b7ea-d9d50d20282d.png", "persona", "Vessel Operator persona"],
+      ["/lovable-uploads/193ff698-c191-4ef1-be4b-4333711bcbfb.png", "process", "Design process workflow"],
+      ["/lovable-uploads/eefd1c07-68ca-4a4f-b88f-229a08ebde9b.png", "final", "Final design"],
+      ["/lovable-uploads/ed83dd69-ba72-49d0-979c-62b155c54612.png", "incident", "OpenOcean vessel monitoring interface with incident management"]
+    ],
+    "openocean-mobile": [
+      ["/lovable-uploads/c1aa01cf-b503-4a43-9ef5-f29c9386dd3b.png", "cover", "OpenOcean Mobile App"],
+      ["/lovable-uploads/f92d6666-a287-46c8-9fe3-9947358b4ed6.png", "hero", "OpenOcean Mobile App"],
+      ["/lovable-uploads/0fb408b9-1d36-4f31-b0be-4a60c9f80bf4.png", "persona", "Fleet Operations Manager persona"],
+      ["/lovable-uploads/f7d9c415-3c54-413b-a479-db3038f986f5.png", "ia", "Information architecture flow"],
+      ["/lovable-uploads/42d045c5-0f8a-444a-91f7-fa62f5899ebf.png", "levels", "Mobile app levels and navigation flow"],
+      ["/lovable-uploads/5c0c08cb-548d-43c9-9c9f-88b7b6a21d05.png", "position-spec", "Position component design specifications"],
+      ["/lovable-uploads/a8ed14eb-a5ba-4050-a933-fe96f1b4d839.png", "themes", "Dark and light theme variations"],
+      ["/lovable-uploads/7cdcabbf-d563-41f8-aab2-61843000fa58.png", "screens-alerts", "Alert details, fleet view and map"],
+      ["/lovable-uploads/55567781-d66a-44d1-b93f-165103a99b83.png", "screens-fleet", "Fleet list, measurement tool and messaging"]
+    ],
+    "pandadoc-integrations": [
+      ["/lovable-uploads/f5e22c44-01db-4129-a49a-cd101ab11f66.png", "cover", "Setting up CRM Integrations with PandaDoc"],
+      ["/lovable-uploads/a5ee127d-1521-4b2f-bd5b-c9b318381e59.png", "hero", "Setting up CRM Integrations with PandaDoc"],
+      ["/lovable-uploads/efee6a61-e961-479e-987c-68b99381fcf5.png", "before", "Setup before the redesign: complex integration steps and the Salesforce interface"],
+      ["/lovable-uploads/7c833fe0-5167-4c2d-831e-bc6025be3179.png", "status-mapping", "Document status mapped to HubSpot deal stages"],
+      ["/lovable-uploads/9f670afe-348f-4988-abb9-038f30fb80e3.png", "token-mapping", "Final HubSpot integration with token mapping and document sync"],
+      ["/lovable-uploads/c3824566-62ce-4277-aa92-acfe1f1c8209.png", "wizard", "Setup wizard with a guided linear flow and progress steps"]
+    ]
+  }
+}

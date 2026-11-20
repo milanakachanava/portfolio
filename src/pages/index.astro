@@ -9,7 +9,7 @@ const email = 'milana.kachanava@gmail.com';
   <div class="stream" id="work">
     {work.map((w) => (
       <a class="project" href={`/work/${w.id}/`}>
-        <div class="shot">{w.data.company} · screenshot</div>
+        <div class="shot"><img src={`/work/${w.id}/cover.webp`} alt={w.data.title} loading="lazy" /></div>
         <div class="info">
           <div>
             <h2>{w.data.title}</h2>

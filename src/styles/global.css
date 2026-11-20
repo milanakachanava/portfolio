@@ -121,3 +121,12 @@ h1, h2, h3 { font-weight: 600; letter-spacing: -0.02em; line-height: 1.2; margin
   .prose dl { grid-template-columns: 1fr; gap: 2px; }
   .prose dt { margin-top: 8px; }
 }
+
+/* Images */
+.project .shot img { width: 100%; height: 100%; object-fit: cover; object-position: top center; }
+.prose figure img { width: 100%; border-radius: 10px; border: 1px solid var(--line); background: #fff; }
+.prose figure.grid2 { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; align-items: start; }
+.prose figure.grid2 figcaption { grid-column: 1 / -1; }
+.prose figure.tall { background: var(--bg); border-radius: var(--radius); padding: 28px; }
+.prose figure.tall img { width: auto; max-width: 100%; max-height: 1100px; margin: 0 auto; }
+@media (max-width: 900px) { .prose figure.grid2 { grid-template-columns: 1fr; } .prose figure.tall { padding: 12px; } }

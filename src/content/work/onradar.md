@@ -16,7 +16,7 @@ tldr:
   result: An alerts MVP became a live operations platform where an alert, the vessel's context, tasks and ship-to-shore messaging live in one workflow.
 ---
 
-<figure><div class="ph">Hero image: onRADAR alert triage with the vessel context panel</div></figure>
+<figure><img src="/work/onradar/cover.webp" alt="A fleet operator at work with onRADAR" loading="lazy" /></figure>
 
 ## My role
 
@@ -33,11 +33,15 @@ Maritime professionals relied on fragmented systems and manual processes. When a
 - Usability testing of sorting alerts, finding information, and alert and task workflows.
 - Competitive analysis of monitoring patterns and anti-patterns.
 
+<figure><img src="/work/onradar/research.webp" alt="Remote research session with operators" loading="lazy" /><figcaption>A research session with operators.</figcaption></figure>
+
 What we learned:
 
 - Alerts are handled under time pressure, so severity, location and the recommended next step have to be scannable.
 - The most valuable context is vessel information, the timeline and history, and messaging.
 - Integrated messaging is essential to coordinate ship and shore without losing history.
+
+<figure><img src="/work/onradar/persona.webp" alt="Vessel Operator (onshore) persona" loading="lazy" /><figcaption>Vessel Operator (onshore): goals, needs, frustrations and observations.</figcaption></figure>
 
 ## Design decisions
 
@@ -53,7 +57,7 @@ What we learned:
 
 </div>
 
-<figure><div class="ph">Alert list and detail panel with tabs: Details, Messages, History</div></figure>
+<figure><img src="/work/onradar/incident.webp" alt="Vessel monitoring with incident management" loading="lazy" /><figcaption>An alert linked to the vessel on the map, its timeline and the incident.</figcaption></figure>
 
 <div class="decision">
 
@@ -79,9 +83,13 @@ What we learned:
 
 </div>
 
+<figure><img src="/work/onradar/process.webp" alt="Alert workflow overview and alert states" loading="lazy" /><figcaption>Alert workflow overview: list, detail panel and the states behind them.</figcaption></figure>
+
 ## What shipped
 
 A released platform that connects alert triage, vessel context, tasks and messaging in one operational workflow, with rolling releases, demo sessions and post-launch monitoring.
+
+<figure><img src="/work/onradar/final.webp" alt="Final onRADAR design on web and desktop" loading="lazy" /><figcaption>The released design: alert list, detail panel and task creation.</figcaption></figure>
 
 ## What I would measure next
 

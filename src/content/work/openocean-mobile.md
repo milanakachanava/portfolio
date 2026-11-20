@@ -16,7 +16,7 @@ tldr:
   result: A live iOS and Android companion that brings vessel status, alerts, tasks and messaging to operators away from the desk.
 ---
 
-<figure><div class="ph">Hero image: mobile alert triage in light and dark mode</div></figure>
+<figure><img src="/work/openocean-mobile/cover.webp" alt="OpenOcean Mobile: fleet, measurement tool and messages" loading="lazy" /></figure>
 
 ## My role
 
@@ -35,6 +35,8 @@ What we learned:
 - Alerts can arrive while connectivity is intermittent, so offline access and reliable sync are mandatory.
 - Map and track views are key for quick verification.
 - Dark mode and readable contrast matter for night shifts.
+
+<figure><img src="/work/openocean-mobile/persona.webp" alt="Fleet Operations Manager persona" loading="lazy" /><figcaption>Fleet Operations Manager: what they need from the phone.</figcaption></figure>
 
 ## Design decisions
 
@@ -62,7 +64,7 @@ What we learned:
 
 </div>
 
-<figure><div class="ph">Offline and sync states · bottom navigation with the watching / assigned filter</div></figure>
+<figure class="grid2"><img src="/work/openocean-mobile/ia.webp" alt="Information architecture flow" loading="lazy" /><img src="/work/openocean-mobile/levels.webp" alt="App levels and navigation" loading="lazy" /><figcaption>Information architecture and navigation levels.</figcaption></figure>
 
 <div class="decision">
 
@@ -76,9 +78,15 @@ What we learned:
 
 </div>
 
+<figure class="grid2"><img src="/work/openocean-mobile/themes.webp" alt="Component types in dark and light themes" loading="lazy" /><img src="/work/openocean-mobile/position-spec.webp" alt="Position component specification" loading="lazy" /><figcaption>Component types in both themes, and a component specification.</figcaption></figure>
+
 ## What shipped
 
 A live iOS and Android app with a bottom navigation, a persistent watching / assigned filter, light and dark themes, offline and sync states, and deep links from an alert to the vessel's position.
+
+<figure><img src="/work/openocean-mobile/screens-alerts.webp" alt="Alert details, fleet view and map" loading="lazy" /><figcaption>Alert details, fleet view and map.</figcaption></figure>
+
+<figure><img src="/work/openocean-mobile/screens-fleet.webp" alt="Fleet list, measurement tool and messaging" loading="lazy" /><figcaption>Fleet list, measurement tool and messaging.</figcaption></figure>
 
 ## What I would measure next
 

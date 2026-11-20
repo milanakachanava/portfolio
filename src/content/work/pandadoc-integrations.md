@@ -16,7 +16,7 @@ tldr:
   result: The integration shipped with guided setup, field mapping and CRM data sync that non-technical users can configure themselves.
 ---
 
-<figure><div class="ph">Hero image: the field mapping step with live samples</div></figure>
+<figure><img src="/work/pandadoc-integrations/cover.webp" alt="PandaDoc integrations with Salesforce and HubSpot" loading="lazy" /></figure>
 
 ## My role
 
@@ -28,6 +28,8 @@ As Product Designer in the Integrations team I worked with two PMs, three engine
 - Shadow sessions watching admins configure existing integrations and troubleshoot them.
 - An analysis of CRM fields and the data users moved by hand.
 - A competitive review of common integration patterns.
+
+<figure><img src="/work/pandadoc-integrations/before.webp" alt="Setup process before the redesign" loading="lazy" /><figcaption>Before: setup spread across disconnected steps and CRM screens.</figcaption></figure>
 
 What we learned:
 
@@ -50,6 +52,8 @@ What we learned:
 
 </div>
 
+<figure><img src="/work/pandadoc-integrations/wizard.webp" alt="Guided setup wizard with progress steps" loading="lazy" /><figcaption>The guided setup: progress steps and contextual help at each stage.</figcaption></figure>
+
 <div class="decision">
 
 ### Show the data before it syncs
@@ -62,7 +66,7 @@ What we learned:
 
 </div>
 
-<figure><div class="ph">Document status → CRM deal stage mapping with validation</div></figure>
+<figure class="grid2"><img src="/work/pandadoc-integrations/status-mapping.webp" alt="Document status mapped to CRM deal stages" loading="lazy" /><img src="/work/pandadoc-integrations/token-mapping.webp" alt="Token mapping and document sync" loading="lazy" /><figcaption>Status-to-stage mapping, and token mapping with document sync.</figcaption></figure>
 
 ## What shipped
 
