@@ -1,9 +1,28 @@
 ---
 import Base from '../layouts/Base.astro';
 import { getCollection } from 'astro:content';
+import { aiProjects } from '../data/ai-projects';
 
 const work = (await getCollection('work')).sort((a, b) => a.data.order - b.data.order);
 const email = 'milana.kachanava@gmail.com';
+const pad = (n: number) => String(n).padStart(2, '0');
+
+const experience = [
+  { y: '2025–2026', c: 'Super Dispatch', r: 'Senior Product Designer', d: 'Auto-transport marketplace · Trust & Safety' },
+  { y: '2021–2025', c: '90 Percent of Everything', r: 'Senior Product Designer', d: 'Maritime SaaS · fleet operations' },
+  { y: '2020–2021', c: 'Kaseya', r: 'Senior UX Designer', d: 'IT management · RMM platform' },
+  { y: '2019–2020', c: 'PandaDoc', r: 'Product Designer', d: 'Sales documents · CRM integrations' },
+  { y: '2017–2019', c: 'EPAM Systems', r: 'UX Designer', d: 'Thomson Reuters, Schneider Electric, METRO, MeteoGroup' },
+  { y: '2014–2017', c: 'Devicepros, Qulix Systems', r: 'UX and UI/UX Designer', d: 'Test automation, web and mobile apps' },
+];
+
+const skills = [
+  { k: 'Product design', v: 'Problem framing, information architecture, data-dense dashboards, alert and workflow design, risk and trust signals, cross-platform design' },
+  { k: 'Research', v: 'Interviews, contextual observation, usability testing, competitive analysis, product analytics (Heap, Fullstory)' },
+  { k: 'Design systems', v: 'Figma libraries, tokens, mobile design systems, shared patterns, developer-ready specs' },
+  { k: 'AI and prototyping', v: 'Prototypes and small products in code with Claude, Codex and Cursor; Figma Make' },
+  { k: 'Facilitation', v: 'Workshops, prioritisation with PM and engineering, cross-team design standards' },
+];
 ---
 <Base>
   <div class="stream" id="work">
@@ -12,7 +31,7 @@ const email = 'milana.kachanava@gmail.com';
         <div class="shot"><img src={`/work/${w.id}/cover.webp`} alt={w.data.title} loading="lazy" /></div>
         <div class="info">
           <div>
-            <span class="num">{String(i + 1).padStart(2, '0')} / {String(work.length).padStart(2, '0')}</span>
+            <span class="num">{pad(i + 1)} / {pad(work.length)}</span>
             <h2>{w.data.title}</h2>
             <div class="meta">
               {w.data.company}: {w.data.tags.slice(0, 2).join(', ')}<br />
@@ -25,15 +44,54 @@ const email = 'milana.kachanava@gmail.com';
     ))}
   </div>
 
+  <section class="section" id="ai">
+    <p class="eyebrow">Side projects</p>
+    <h2>Built with AI</h2>
+    <p>Small products I design and build end to end with AI coding tools: the idea, the model behind it, the interface and the code.</p>
+    <div class="ai-list">
+      {aiProjects.map((p) => (
+        <a class="ai-card" href={p.url} target="_blank" rel="noopener">
+          <div class="shot"><img src={p.cover} alt={p.title} loading="lazy" /></div>
+          <div class="ai-info">
+            <div class="meta">{p.kind} · {p.status} · {p.year} · {p.language}</div>
+            <h3>{p.title} <span class="arrow">↗</span></h3>
+            <p>{p.text}</p>
+          </div>
+        </a>
+      ))}
+    </div>
+  </section>
+
   <section class="section" id="about">
-    <h2>About</h2>
+    <p class="eyebrow">About</p>
+    <h2>Milana Kachanava</h2>
     <p>I'm a senior product designer with 10+ years on complex B2B products. Most of my work sits at the moment someone has to decide under pressure: a shipper choosing a carrier, an operator handling a vessel alert at night, a sales admin connecting a CRM without breaking their data.</p>
-    <p>At Super Dispatch I led design for SuperProtect, a fraud-prevention product that went from shipper interviews to a paid release in 9 months. At 90 Percent of Everything I spent more than three years growing onRADAR from an alerts MVP into a live fleet operations platform on web, desktop and mobile. Before that: CRM integrations at PandaDoc, Kaseya's RMM platform, and enterprise projects for Thomson Reuters, Schneider Electric and METRO at EPAM.</p>
-    <p>I prototype in code with Claude, Codex and Cursor, so ideas reach users while there is still time to change direction. I also run workshops that help a team hear each other and decide.</p>
+    <p>At Super Dispatch I led design for SuperProtect, a fraud-prevention product that went from ~20 shipper interviews to a paid release in 9 months and its first 50 customers. At 90 Percent of Everything I spent more than three years growing onRADAR from an alerts MVP into a live fleet operations platform on web, desktop and mobile. Before that: integrations with 6 CRMs at PandaDoc, Kaseya's RMM platform, and enterprise projects for Thomson Reuters, Schneider Electric and METRO at EPAM.</p>
+    <p>I prototype in code with Claude, Codex and Cursor, so ideas reach users while there is still time to change direction. I run workshops that help a team hear each other and decide, and I was a mentor at EPAM's UX Camp.</p>
+
+    <h3 class="sub-h">Experience</h3>
+    <ul class="facts exp">
+      {experience.map((e) => (
+        <li><span>{e.y}</span><span><b>{e.c}</b> · {e.r}<br /><small>{e.d}</small></span></li>
+      ))}
+    </ul>
+
+    <h3 class="sub-h">Skills</h3>
+    <ul class="facts">
+      {skills.map((s) => <li><span>{s.k}</span><span>{s.v}</span></li>)}
+    </ul>
+
+    <h3 class="sub-h">Education</h3>
+    <ul class="facts">
+      <li><span>2013–2017</span><span>Media and Visual Design, European Humanities University</span></li>
+      <li><span>2016–2017</span><span>UX Design: service design, product analytics and metrics, Skillbox</span></li>
+      <li><span>2018</span><span>UX Camp, EPAM Systems, as mentor and mentee</span></li>
+    </ul>
   </section>
 
   <section class="section" id="contact">
-    <h2>Contact</h2>
+    <p class="eyebrow">Contact</p>
+    <h2>Let's talk</h2>
     <p>Open to senior product design roles, remote or hybrid.</p>
     <ul class="facts">
       <li><span>Email</span><a href={`mailto:${email}`}>{email}</a></li>

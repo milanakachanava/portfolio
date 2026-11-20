@@ -103,6 +103,12 @@ Once the model had proved useful in real carrier evaluations, we turned it into 
 
 <figure><img src="/work/superprotect/public-page.webp" alt="Public Super Dispatch page introducing SuperProtect" loading="lazy" /><figcaption>SuperProtect on the public Super Dispatch website.</figcaption></figure>
 
+## How I worked with AI
+
+Claude was my research partner on the data. We read through the same carrier source material, company details, authority status, safety ratings, environmental registrations and commodity information, and grouped it into the sections a shipper needs before booking. The judgment on what a shipper sees first stayed mine and the team's.
+
+Tools on this project: Figma, FigJam, Figma Make, Claude, Codex, Heap.
+
 ## What shipped
 
 - A restructured carrier profile: company information, compliance, insurance, ratings and performance in one view.
