@@ -15,18 +15,16 @@ const { Content } = await render(entry);
 const d = entry.data;
 ---
 <Base title={`${d.title} — Milana Kachanava`} description={d.card}>
-  <div class="wrap">
-    <header class="case-head">
-      <a class="back" href="/#work">← All work</a>
-      <h1>{d.title}</h1>
-      <p class="muted">{d.company} · {d.years}</p>
-      <dl class="case-meta">
-        <div><dt>Role</dt><dd>{d.role}</dd></div>
-        <div><dt>Team</dt><dd>{d.team}</dd></div>
-        <div><dt>Timeline</dt><dd>{d.timeline}</dd></div>
-        <div><dt>Platform</dt><dd>{d.platform} · {d.status}</dd></div>
-      </dl>
-    </header>
+  <div class="case">
+    <a class="back" href="/#work">← All work</a>
+    <h1>{d.title}</h1>
+    <p class="muted">{d.company} · {d.years}</p>
+    <dl class="case-meta">
+      <div><dt>Role</dt><dd>{d.role}</dd></div>
+      <div><dt>Team</dt><dd>{d.team}</dd></div>
+      <div><dt>Timeline</dt><dd>{d.timeline}</dd></div>
+      <div><dt>Platform</dt><dd>{d.platform} · {d.status}</dd></div>
+    </dl>
 
     <div class="tldr">
       <div><h4>Problem</h4><p>{d.tldr.problem}</p></div>
