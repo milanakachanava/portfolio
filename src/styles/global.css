@@ -84,7 +84,7 @@ h1, h2, h3 { font-weight: 600; letter-spacing: -0.02em; line-height: 1.1; margin
 .section h2 { font-size: 40px; margin-bottom: 22px; text-transform: uppercase; letter-spacing: -0.035em; }
 .section p { max-width: var(--read); margin: 0 0 14px; }
 .facts { list-style: none; padding: 0; margin: 8px 0 0; max-width: var(--read); font-size: 15px; }
-.facts li { padding: 11px 0; border-top: 1px solid var(--line); display: flex; justify-content: space-between; align-items: baseline; gap: 16px; }
+.facts li { padding: 12px 0; border-top: 1px solid var(--line); display: grid; grid-template-columns: 180px 1fr; align-items: baseline; gap: 16px; text-align: left; }
 .facts li span:first-child { color: var(--faint); }
 
 /* Case page */
@@ -147,4 +147,5 @@ h1, h2, h3 { font-weight: 600; letter-spacing: -0.02em; line-height: 1.1; margin
   .prose dl { grid-template-columns: 1fr; gap: 2px; }
   .prose dt { margin-top: 8px; }
   .prose figure.tall { padding: 12px; }
+  .facts li { grid-template-columns: 1fr; gap: 2px; }
 }
