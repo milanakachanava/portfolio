@@ -1,0 +1,48 @@
+---
+import '../styles/global.css';
+
+interface Props {
+  title?: string;
+  description?: string;
+}
+
+const {
+  title = 'Milana Kachanava — Senior Product Designer',
+  description = 'Senior Product Designer who turns scattered data into decisions people can act on. Trust & safety, fleet operations, complex B2B SaaS.',
+} = Astro.props;
+const cv = '/Milana_Kachanava_Senior_Product_Designer_CV.pdf';
+---
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="wrap">
+        <a class="name" href="/">Milana Kachanava</a>
+        <nav>
+          <a href="/#work">Work</a>
+          <a class="hide-sm" href="/#about">About</a>
+          <a class="hide-sm" href="/#contact">Contact</a>
+          <a class="cv" href={cv} target="_blank">CV</a>
+        </nav>
+      </div>
+    </header>
+    <main>
+      <slot />
+    </main>
+    <footer class="site-footer">
+      <div class="wrap">
+        <span>© {new Date().getFullYear()} Milana Kachanava</span>
+        <span>Warsaw, Poland</span>
+      </div>
+    </footer>
+  </body>
+</html>

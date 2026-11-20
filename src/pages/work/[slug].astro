@@ -1,0 +1,46 @@
+---
+import Base from '../../layouts/Base.astro';
+import { getCollection, render } from 'astro:content';
+
+export async function getStaticPaths() {
+  const work = (await getCollection('work')).sort((a, b) => a.data.order - b.data.order);
+  return work.map((entry, i) => ({
+    params: { slug: entry.id },
+    props: { entry, next: work[(i + 1) % work.length] },
+  }));
+}
+
+const { entry, next } = Astro.props;
+const { Content } = await render(entry);
+const d = entry.data;
+---
+<Base title={`${d.title} — Milana Kachanava`} description={d.card}>
+  <div class="wrap">
+    <header class="case-head">
+      <a class="back" href="/#work">← All work</a>
+      <h1>{d.title}</h1>
+      <p class="muted">{d.company} · {d.years}</p>
+      <dl class="case-meta">
+        <div><dt>Role</dt><dd>{d.role}</dd></div>
+        <div><dt>Team</dt><dd>{d.team}</dd></div>
+        <div><dt>Timeline</dt><dd>{d.timeline}</dd></div>
+        <div><dt>Platform</dt><dd>{d.platform} · {d.status}</dd></div>
+      </dl>
+    </header>
+
+    <div class="tldr">
+      <div><h4>Problem</h4><p>{d.tldr.problem}</p></div>
+      <div><h4>What I did</h4><p>{d.tldr.did}</p></div>
+      <div><h4>Result</h4><p>{d.tldr.result}</p></div>
+    </div>
+
+    <article class="prose">
+      <Content />
+    </article>
+
+    <nav class="next">
+      <a href="/#work"><small>Back</small>All work</a>
+      <a href={`/work/${next.id}/`} style="text-align:right"><small>Next project</small>{next.data.title} →</a>
+    </nav>
+  </div>
+</Base>

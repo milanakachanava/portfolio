@@ -1,0 +1,93 @@
+---
+import Base from '../layouts/Base.astro';
+import { getCollection } from 'astro:content';
+
+const work = (await getCollection('work')).sort((a, b) => a.data.order - b.data.order);
+const email = 'milana.kachanava@gmail.com';
+const cv = '/Milana_Kachanava_Senior_Product_Designer_CV.pdf';
+
+const timeline = [
+  { y: '2025–2026', c: 'Super Dispatch', d: 'Logistics · Trust & Safety' },
+  { y: '2021–2025', c: '90 Percent of Everything', d: 'Maritime' },
+  { y: '2020–2021', c: 'Kaseya', d: 'IT management' },
+  { y: '2019–2020', c: 'PandaDoc', d: 'Sales documents' },
+  { y: '2017–2019', c: 'EPAM Systems', d: 'Enterprise clients' },
+];
+---
+<Base>
+  <div class="wrap">
+    <section class="hero">
+      <div>
+        <p class="eyebrow">Senior Product Designer · Warsaw</p>
+        <h1>I turn scattered data into decisions people can act on. <span class="muted">Whom to trust, which alert to handle first, what to sync.</span></h1>
+        <div class="actions">
+          <a class="btn primary" href={`mailto:${email}`}>Email me</a>
+          <button class="btn" id="copy" data-email={email}>Copy email</button>
+          <a class="btn" href={cv} target="_blank">Download CV</a>
+        </div>
+      </div>
+      <ul class="timeline" aria-label="Experience">
+        {timeline.map((t) => (
+          <li><span class="y">{t.y}</span><span>{t.c}</span><span class="d">{t.d}</span></li>
+        ))}
+      </ul>
+    </section>
+  </div>
+
+  <section class="block" id="work">
+    <div class="wrap">
+      <h2>Selected work</h2>
+      <div class="cards">
+        {work.map((w) => (
+          <a class="card" href={`/work/${w.id}/`}>
+            <div class="cover">{w.data.company}</div>
+            <div class="body">
+              <div class="meta">{w.data.company} · {w.data.years}</div>
+              <h3>{w.data.title}</h3>
+              <p>{w.data.card}</p>
+              <div class="tags">{w.data.tags.map((t) => <span>{t}</span>)}</div>
+            </div>
+          </a>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="block" id="about">
+    <div class="wrap two">
+      <h2>About</h2>
+      <div class="read">
+        <p>I'm a senior product designer with 10+ years on complex B2B products. Most of my work sits at the moment someone has to decide under pressure: a shipper choosing a carrier, an operator handling a vessel alert at night, a sales admin connecting a CRM without breaking their data.</p>
+        <p>At Super Dispatch I led design for SuperProtect, a fraud-prevention product that went from shipper interviews to a paid release in 9 months. At 90 Percent of Everything I spent more than three years growing onRADAR from an alerts MVP into a live fleet operations platform on web, desktop and mobile. Before that: CRM integrations at PandaDoc, Kaseya's RMM platform, and enterprise projects for Thomson Reuters, Schneider Electric and METRO at EPAM.</p>
+        <p>I prototype in code with Claude, Codex and Cursor, so ideas reach users while there is still time to change direction. I also run workshops that help a team hear each other and decide.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="block" id="contact">
+    <div class="wrap two">
+      <h2>Contact</h2>
+      <div class="read">
+        <p>Open to senior product design roles, remote or hybrid.</p>
+        <ul class="facts">
+          <li><span>Email</span><a href={`mailto:${email}`}>{email}</a></li>
+          <li><span>LinkedIn</span><a href="https://www.linkedin.com/in/lanakachanova/" target="_blank">linkedin.com/in/lanakachanova</a></li>
+          <li><span>Location</span><span>Warsaw, Poland · CET</span></li>
+          <li><span>Work authorization</span><span>Polish residence card, no sponsorship needed</span></li>
+          <li><span>Languages</span><span>English C1 · Polish B2 · Russian native</span></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    const b = document.getElementById('copy');
+    b?.addEventListener('click', async () => {
+      try {
+        await navigator.clipboard.writeText(b.dataset.email ?? '');
+        b.textContent = 'Copied';
+        setTimeout(() => (b.textContent = 'Copy email'), 1600);
+      } catch {}
+    });
+  </script>
+</Base>
