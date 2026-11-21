@@ -52,6 +52,8 @@ What we learned:
   <dt>Order of work</dt><dd>First, the data and context inside each alert: types, severity, grouping, and everything about an incident in one place instead of several sections. Second, messaging inside the product. Third, the mobile app. Then tasks and events.</dd>
 </dl>
 
+<figure><img src="/work/onradar/before-mvp.webp" alt="The onRADAR MVP dashboard: lists of alerts, tasks and events with only an ID, title, date and a generic priority label" loading="lazy" /><figcaption>Where it started: the onRADAR dashboard when I joined. Alerts and tasks carried an ID, a title, a date and a placeholder priority label, with almost no context.</figcaption></figure>
+
 ## Design decisions
 
 <div class="decision">
