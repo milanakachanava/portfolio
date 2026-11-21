@@ -6,12 +6,12 @@ order: 1
 card: SuperProtect went from ~20 shipper interviews to a paid release in 9 months, with its first 50 customers.
 tags: [Trust & Safety, Marketplace, B2B SaaS]
 role: Senior Product Designer, Trust & Safety team
-team: Trust & Safety product team
+team: 1 PM, 3 engineers and me
 timeline: 9 months
 platform: Web
 status: Released
 tldr:
-  problem: Before booking a carrier, shippers checked company data, FMCSA compliance, insurance and ratings on several separate sites, and still had to guess whether the carrier was safe.
+  problem: Before booking a carrier, shippers cross-checked the same carrier in three places, Super Dispatch, MyCarrierPortal and FMCSA, looking it up by ID each time, and still had to guess whether it was safe.
   did: I led design for the carrier profile and SuperProtect, from shipper interviews to explainable risk checks shown everywhere a carrier decision happens, and the paid product around them.
   result: SuperProtect reached a paid release in 9 months and won its first 50 customers. In follow-up interviews, shippers were using the flags to choose carriers.
 ---
@@ -24,7 +24,7 @@ I led product design for the carrier profile and SuperProtect in the Trust & Saf
 
 ## The problem
 
-A shipper has to decide whom to trust with a car. The information they need was scattered across company records, compliance assessments, insurance details, past performance and carrier activity. Shippers moved between external sites, read raw numbers and validated a carrier by hand before every booking.
+A shipper has to decide whom to trust with a car. The information they need was scattered across company records, compliance assessments, insurance details, past performance and carrier activity. Before every booking, shippers checked the carrier in Super Dispatch, then went to MyCarrierPortal and FMCSA, looked it up by ID, and cross-checked the same data in three places by hand.
 
 ## Research
 
@@ -44,6 +44,15 @@ A shipper has to decide whom to trust with a car. The information they need was 
 <figure class="grid2"><img src="/work/superprotect/mycarrierportal.webp" alt="Carrier profile in MyCarrierPortal with a risk assessment" loading="lazy" /><img src="/work/superprotect/fmcsa-safer.webp" alt="FMCSA SAFER company snapshot" loading="lazy" /><img src="/work/superprotect/fmcsa-licensing.webp" alt="FMCSA licensing and insurance record" loading="lazy" /><img src="/work/superprotect/authority-data.webp" alt="Carrier authority and safety data marked up during research" loading="lazy" /><figcaption>What shippers check today: MyCarrierPortal, FMCSA SAFER, FMCSA licensing and insurance, and carrier records marked up during research.</figcaption></figure>
 
 <figure><img src="/work/superprotect/inspiration.webp" alt="Inspiration board for risk and trust interfaces" loading="lazy" /><figcaption>How other products communicate trust, risk and account health.</figcaption></figure>
+
+## Constraints and priorities
+
+<dl>
+  <dt>Data</dt><dd>Carrier data from FMCSA, MyCarrierPortal, insurance records and Super Dispatch's own activity data, refreshed daily. We could only show what these sources provide, so the design had to work with their gaps.</dd>
+  <dt>Team</dt><dd>One PM, three engineers and me, alongside the rest of the Trust & Safety roadmap.</dd>
+  <dt>First</dt><dd>Learn what shippers actually look at when they vet a carrier, then keep only the data needed to judge trust and bring it into the product with a daily refresh, so nobody has to leave for FMCSA again.</dd>
+  <dt>Later</dt><dd>Manually adding carriers to monitoring, and a separate SuperProtect tab, were left for after the first version.</dd>
+</dl>
 
 ## Design decisions
 
