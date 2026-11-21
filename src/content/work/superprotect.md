@@ -11,7 +11,7 @@ timeline: 9 months
 platform: Web
 status: Released
 tldr:
-  problem: Before booking a carrier, shippers cross-checked the same carrier in three places, Super Dispatch, MyCarrierPortal and FMCSA, looking it up by ID each time, and still had to guess whether it was safe.
+  problem: Before booking a carrier, shippers cross-checked the same carrier in four places, Super Dispatch, MyCarrierPortal, Carrier411 and FMCSA, looking it up by ID each time, and still had to guess whether it was safe.
   did: I led design for the carrier profile and SuperProtect, from shipper interviews to explainable risk checks shown everywhere a carrier decision happens, and the paid product around them.
   result: SuperProtect reached a paid release in 9 months and won its first 50 customers. In follow-up interviews, shippers were using the flags to choose carriers.
 ---
@@ -24,7 +24,7 @@ I led product design for the carrier profile and SuperProtect in the Trust & Saf
 
 ## The problem
 
-A shipper has to decide whom to trust with a car. The information they need was scattered across company records, compliance assessments, insurance details, past performance and carrier activity. Before every booking, shippers checked the carrier in Super Dispatch, then went to MyCarrierPortal and FMCSA, looked it up by ID, and cross-checked the same data in three places by hand.
+A shipper has to decide whom to trust with a car. The information they need was scattered across company records, compliance assessments, insurance details, past performance and carrier activity. Before every booking, shippers checked the carrier in Super Dispatch, then went to MyCarrierPortal, Carrier411 and FMCSA, looked it up by ID, and cross-checked the same data by hand.
 
 ## Research
 
@@ -39,16 +39,29 @@ A shipper has to decide whom to trust with a car. The information they need was 
 - An analysis of carrier records: company information, authority status, safety ratings, cargo insurance, ratings and performance. I worked through the source data with Claude and grouped it into the sections a shipper actually needs.
 - Heap tracking after release, to see how shippers found, opened and acted on the flags.
 
+What a shipper needs to vet a carrier, from the interviews and the sources they used:
+
+- **Identity:** is the carrier verified with the phone number registered at FMCSA.
+- **Documents:** W-9 and certificates of insurance on file.
+- **Cargo insurance:** limit, deductible and expiry date.
+- **FMCSA status:** USDOT status, entity and operating type, cargo carried, operating authority.
+- **Authority history:** when authority was granted, revoked or reinstated, and any pending applications.
+- **Size and age:** power units, drivers, years in business.
+- **Safety:** inspections and safety rating.
+- **Liability insurance:** coverage on file and when it is cancelled or about to expire.
+
 <figure><img src="/work/superprotect/shipper-interview.webp" alt="Shipper research interview reviewing carrier records" loading="lazy" /><figcaption>A shipper interview about vetting carriers, participant names blurred.</figcaption></figure>
 
 <figure class="grid2"><img src="/work/superprotect/mycarrierportal.webp" alt="Carrier profile in MyCarrierPortal with a risk assessment" loading="lazy" /><img src="/work/superprotect/fmcsa-safer.webp" alt="FMCSA SAFER company snapshot" loading="lazy" /><img src="/work/superprotect/fmcsa-licensing.webp" alt="FMCSA licensing and insurance record" loading="lazy" /><img src="/work/superprotect/authority-data.webp" alt="Carrier authority and safety data marked up during research" loading="lazy" /><figcaption>What shippers check today: MyCarrierPortal, FMCSA SAFER, FMCSA licensing and insurance, and carrier records marked up during research.</figcaption></figure>
+
+<figure><img src="/work/superprotect/carrier411.webp" alt="Carrier411 truck VIN association report with other carriers sharing the same trucks" loading="lazy" /><figcaption>Carrier411, one more source shippers checked: which other companies share the same trucks, and their authority and insurance status.</figcaption></figure>
 
 <figure><img src="/work/superprotect/inspiration.webp" alt="Inspiration board for risk and trust interfaces" loading="lazy" /><figcaption>How other products communicate trust, risk and account health.</figcaption></figure>
 
 ## Constraints and priorities
 
 <dl>
-  <dt>Data</dt><dd>Carrier data from FMCSA, MyCarrierPortal, insurance records and Super Dispatch's own activity data, refreshed daily. We could only show what these sources provide, so the design had to work with their gaps.</dd>
+  <dt>Data</dt><dd>Carrier data from FMCSA, MyCarrierPortal, Carrier411, insurance records and Super Dispatch's own activity data, refreshed daily. We could only show what these sources provide, so the design had to work with their gaps.</dd>
   <dt>Team</dt><dd>One PM, three engineers and me, alongside the rest of the Trust & Safety roadmap.</dd>
   <dt>First</dt><dd>Learn what shippers actually look at when they vet a carrier, then keep only the data needed to judge trust and bring it into the product with a daily refresh, so nobody has to leave for FMCSA again.</dd>
   <dt>Later</dt><dd>Manually adding carriers to monitoring, and a separate SuperProtect tab, were left for after the first version.</dd>
@@ -87,6 +100,20 @@ We grouped the checks into three categories: activity on Super Dispatch, entity 
 <figure class="grid2"><img src="/work/superprotect/passed-drawer.webp" alt="SuperProtect Passed drawer with successful checks" loading="lazy" /><img src="/work/superprotect/failed-drawer.webp" alt="SuperProtect Failed drawer with checks that need review" loading="lazy" /><figcaption>Passed and Failed: every check behind the status, grouped by activity, entity and registration, and FMCSA compliance.</figcaption></figure>
 
 <figure><img src="/work/superprotect/profile-passed.webp" alt="Carrier profile showing the SuperProtect Passed status" loading="lazy" /><figcaption>The status sits at the top of the carrier profile.</figcaption></figure>
+
+<div class="decision">
+
+### Explain the edge case where it appears
+
+<dl>
+  <dt>Options</dt><dd>Show FMCSA fields as they come, or add a short explanation next to the values that are easy to misread.</dd>
+  <dt>Why this one</dt><dd>Raw data can look alarming or reassuring for the wrong reason. "Not authorized" is normal for an intrastate carrier, a pending application can change a status, and insurance that expires in 12 days is still valid today. Each case got a one-line tooltip, the FMCSA snapshot shows when it was last updated and links back to FMCSA.</dd>
+  <dt>Trade-off</dt><dd>More interface copy to write and keep accurate as rules and sources change.</dd>
+</dl>
+
+</div>
+
+<figure class="tall"><img src="/work/superprotect/compliance-assessment.webp" alt="Compliance Assessment in the carrier profile with FMCSA snapshot, authority, company, safety and insurance sections and explanatory tooltips" loading="lazy" /><figcaption>The Compliance Assessment: FMCSA data updated daily, with tooltips on intrastate authority, pending applications and expiring insurance. Personal data blurred.</figcaption></figure>
 
 <div class="decision">
 
@@ -131,7 +158,7 @@ Tools on this project: Figma, FigJam, Figma Make, Claude, Codex, Heap.
 <div class="stat">
   <div><b>9 mo</b><span>from start to paid release</span></div>
   <div><b>50</b><span>first customers</span></div>
-  <div><b>1</b><span>view instead of several external sites</span></div>
+  <div><b>4 → 1</b><span>sources a shipper checks before booking</span></div>
 </div>
 
 Shippers no longer validate a carrier by hand across external sites. In follow-up interviews, where shippers used the product themselves, they were making booking decisions based on the flags.
