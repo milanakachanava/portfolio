@@ -166,3 +166,5 @@ h1, h2, h3 { font-weight: 600; letter-spacing: -0.02em; line-height: 1.1; margin
 .facts.exp b { font-weight: 600; }
 .facts small { color: var(--muted); font-size: 14px; }
 @media (max-width: 900px) { .ai-card { grid-template-columns: 1fr; gap: 14px; } }
+
+.prose figure.video video { display: block; width: 100%; border-radius: 2px; border: 1px solid var(--line); background: var(--soft); }

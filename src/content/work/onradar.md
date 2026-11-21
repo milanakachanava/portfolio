@@ -16,7 +16,7 @@ tldr:
   result: An alerts MVP became a live operations platform where an alert, the vessel's context, tasks and ship-to-shore messaging live in one workflow.
 ---
 
-<figure><img src="/work/onradar/cover.webp" alt="A fleet operator at work with onRADAR" loading="lazy" /></figure>
+<figure class="video"><video autoplay muted loop playsinline preload="metadata" poster="/work/onradar/intro-poster.webp" aria-label="Walkthrough of onRADAR: alert list, alert details, history, alert rules and creating an alert"><source src="/work/onradar/intro.mp4" type="video/mp4" /></video></figure>
 
 ## My role
 
