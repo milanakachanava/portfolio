@@ -12,7 +12,7 @@ platform: Web, desktop
 status: Live
 tldr:
   problem: Fleet operators had to assess time-critical alerts and act on them while switching between disconnected tools.
-  did: I led design for onRADAR on web and desktop, from the alert-to-action flow and information architecture to auto-created tasks and a shared component library.
+  did: "I led design for onRADAR on web and desktop, in order of what operators needed most: richer alert context, ownership of every alert, messaging linked to alerts and vessels, then tasks and events."
   result: An alerts MVP became a live operations platform where an alert, the vessel's context, tasks and ship-to-shore messaging live in one workflow.
 ---
 
@@ -40,8 +40,17 @@ What we learned:
 - Alerts are handled under time pressure, so severity, location and the recommended next step have to be scannable.
 - The most valuable context is vessel information, the timeline and history, and messaging.
 - Integrated messaging is essential to coordinate ship and shore without losing history.
+- In the early product, messages were easy to lose: no grouping, no read or unread state, and no clear answer to who had picked up an alert.
 
 <figure><img src="/work/onradar/persona.webp" alt="Vessel Operator (onshore) persona" loading="lazy" /><figcaption>Vessel Operator (onshore): goals, needs, frustrations and observations.</figcaption></figure>
+
+## Constraints and priorities
+
+<dl>
+  <dt>Data</dt><dd>Positions and events from dozens of vessels came over AIS and satellite links with delays of several hours. Operators had to make decisions on data that was never quite live.</dd>
+  <dt>Starting point</dt><dd>The MVP alert carried very little: no alert types, a basic urgency level and almost no context.</dd>
+  <dt>Order of work</dt><dd>First, the data and context inside each alert: types, severity, grouping, and everything about an incident in one place instead of several sections. Second, messaging inside the product. Third, the mobile app. Then tasks and events.</dd>
+</dl>
 
 ## Design decisions
 
@@ -58,6 +67,30 @@ What we learned:
 </div>
 
 <figure><img src="/work/onradar/incident.webp" alt="Vessel monitoring with incident management" loading="lazy" /><figcaption>An alert linked to the vessel on the map, its timeline and the incident.</figcaption></figure>
+
+<div class="decision">
+
+### Make ownership of every alert visible
+
+<dl>
+  <dt>Options</dt><dd>A shared stream where anyone can respond, or explicit states: who acknowledged the alert, who is responsible, and which tasks it turned into.</dd>
+  <dt>Why this one</dt><dd>In a shared stream alerts and messages got lost and two people could pick up the same incident, or nobody did. I reworked the whole mechanic of acknowledging, assigning and handing an alert over to tasks for the right team members.</dd>
+  <dt>Trade-off</dt><dd>One more deliberate step for the operator, acknowledging, in exchange for a clear owner.</dd>
+</dl>
+
+</div>
+
+<div class="decision">
+
+### Messaging that points at the work
+
+<dl>
+  <dt>Options</dt><dd>Keep ship-to-shore communication in email and chat outside the product, or build messaging in.</dd>
+  <dt>Why this one</dt><dd>Inside onRADAR people can tag an alert or a vessel in a message and open it from the link without leaving the product. The same messaging runs in the office, on board and in the mobile app.</dd>
+  <dt>Trade-off</dt><dd>Messaging had to behave the same on three surfaces with very different connectivity.</dd>
+</dl>
+
+</div>
 
 <div class="decision">
 

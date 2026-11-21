@@ -3,7 +3,7 @@ title: Turning scattered carrier records into a paid fraud-prevention product
 company: Super Dispatch
 years: 2025–2026
 order: 1
-card: SuperProtect went from ~20 shipper interviews to a paid release in 9 months, with its first 50 customers.
+card: SuperProtect went from ~20 shipper interviews to a paid release in 9 months, and replaced four sources with one carrier profile.
 tags: [Trust & Safety, Marketplace, B2B SaaS]
 role: Senior Product Designer, Trust & Safety team
 team: 1 PM, 3 engineers and me
@@ -13,7 +13,7 @@ status: Released
 tldr:
   problem: Before booking a carrier, shippers cross-checked the same carrier in four places, Super Dispatch, MyCarrierPortal, Carrier411 and FMCSA, looking it up by ID each time, and still had to guess whether it was safe.
   did: I led design for the carrier profile and SuperProtect, from shipper interviews to explainable risk checks shown everywhere a carrier decision happens, and the paid product around them.
-  result: SuperProtect reached a paid release in 9 months and won its first 50 customers. In follow-up interviews, shippers were using the flags to choose carriers.
+  result: SuperProtect reached a paid release in 9 months and won its first paying customers. In follow-up interviews, shippers were using the flags to choose carriers.
 ---
 
 <figure><img src="/work/superprotect/cover.webp" alt="SuperProtect: better protection on every load" loading="lazy" /></figure>
@@ -157,7 +157,7 @@ Tools on this project: Figma, FigJam, Figma Make, Claude, Codex, Heap.
 
 <div class="stat">
   <div><b>9 mo</b><span>from start to paid release</span></div>
-  <div><b>50</b><span>first customers</span></div>
+  <div><b>Paid</b><span>released and selling to its first customers</span></div>
   <div><b>4 → 1</b><span>sources a shipper checks before booking</span></div>
 </div>
 

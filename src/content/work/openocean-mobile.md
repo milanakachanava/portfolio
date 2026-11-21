@@ -35,6 +35,7 @@ What we learned:
 - Alerts can arrive while connectivity is intermittent, so offline access and reliable sync are mandatory.
 - Map and track views are key for quick verification.
 - Dark mode and readable contrast matter for night shifts.
+- Out of hours, the real question is time to react: does this alert need me now, or can it wait until the morning?
 
 <figure><img src="/work/openocean-mobile/persona.webp" alt="Fleet Operations Manager persona" loading="lazy" /><figcaption>Fleet Operations Manager: what they need from the phone.</figcaption></figure>
 
@@ -46,7 +47,7 @@ What we learned:
 
 <dl>
   <dt>Options</dt><dd>Port the web product to mobile, or choose the features people need away from the desk.</dd>
-  <dt>Why this one</dt><dd>Web analytics and a prioritisation workshop showed six core features: alerts, messages, fleet list, vessel track, tasks and the measurement tool.</dd>
+  <dt>Why this one</dt><dd>Conversations with operators and dispatchers, and web analytics, showed the core of the job away from the desk: open an alert, understand its context, see the vessel on the map, measure a distance, make a basic change to the itinerary. Six features covered it: alerts, messages, fleet list, vessel track, tasks and the measurement tool. Procurement, fuel consumption and the rest of the platform stay on the desktop.</dd>
   <dt>Trade-off</dt><dd>Some web workflows stay desk-only, so mobile screens link back to the full context where needed.</dd>
 </dl>
 
@@ -81,6 +82,9 @@ What we learned:
 <figure class="grid2"><img src="/work/openocean-mobile/themes.webp" alt="Component types in dark and light themes" loading="lazy" /><img src="/work/openocean-mobile/position-spec.webp" alt="Position component specification" loading="lazy" /><figcaption>Component types in both themes, and a component specification.</figcaption></figure>
 
 ## What shipped
+
+The app was built from scratch on Material Design, for iOS and Android, with the same alert data and messaging as the web product.
+
 
 A live iOS and Android app with a bottom navigation, a persistent watching / assigned filter, light and dark themes, offline and sync states, and deep links from an alert to the vessel's position.
 

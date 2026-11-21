@@ -3,7 +3,7 @@ title: One guided flow for connecting six CRMs
 company: PandaDoc
 years: 2019–2020
 order: 4
-card: Integration setup for HubSpot, Salesforce, Pipedrive, Zoho and more, redesigned as one self-serve flow.
+card: CRM setup went from 20+ steps across two tabs and a help article to a ~7-step flow in one window, for 6 CRMs.
 tags: [B2B SaaS, CRM integrations, Workflow automation]
 role: Product Designer, Integrations team
 team: 1 designer, 3 engineers, 2 PMs
@@ -11,9 +11,9 @@ timeline: 8 months
 platform: Web
 status: Live
 tldr:
-  problem: Sales reps and admins faced error-prone field mapping and disconnected setup steps, so many contacted support instead of finishing setup.
-  did: I redesigned the setup for 6 CRMs as one guided flow, with visual status-to-stage mapping, live field samples, test sync and in-context validation.
-  result: The integration shipped with guided setup, field mapping and CRM data sync that non-technical users can configure themselves.
+  problem: Setting up a CRM integration took 20+ steps across two browser tabs and a long help article, with different details for every CRM, so many admins contacted support instead of finishing.
+  did: I replaced it with a ~7-step guided flow, unified across 6 CRMs, with OAuth access as a single step, visual status-to-stage mapping, live field samples and test sync.
+  result: Setup now happens in one window, without the help article or switching between PandaDoc and the CRM, and non-technical users can do it themselves.
 ---
 
 <figure><img src="/work/pandadoc-integrations/cover.webp" alt="PandaDoc integrations with Salesforce and HubSpot" loading="lazy" /></figure>
@@ -21,6 +21,10 @@ tldr:
 ## My role
 
 As Product Designer in the Integrations team I worked with two PMs, three engineers and support on the setup flows, mapping interactions and validation for PandaDoc's CRM integrations.
+
+## The problem
+
+Before the redesign, connecting a CRM took 20 steps or more. Admins worked in two tabs, PandaDoc and the CRM, while following a long help article, and every CRM had its own details. Constant context switching made the setup slow and error-prone.
 
 ## Research
 
@@ -46,7 +50,7 @@ What we learned:
 
 <dl>
   <dt>Options</dt><dd>Keep setup spread across settings screens, or guide users through one sequence.</dd>
-  <dt>Why this one</dt><dd>Connect, select a template, map fields, map statuses to stages, test sync, enable. Each step depends on the one before, so a single flow prevents half-finished setups.</dd>
+  <dt>Why this one</dt><dd>About seven steps in one window: connect, select a template, map fields, map statuses to stages, test sync, enable. Granting OAuth access became one step instead of a page of instructions. The same stepper works for every CRM PandaDoc supports, so the help article was no longer needed.</dd>
   <dt>Trade-off</dt><dd>Power users lose some freedom to jump around, so every step stays editable later.</dd>
 </dl>
 
@@ -67,6 +71,14 @@ What we learned:
 </div>
 
 <figure class="grid2"><img src="/work/pandadoc-integrations/status-mapping.webp" alt="Document status mapped to CRM deal stages" loading="lazy" /><img src="/work/pandadoc-integrations/token-mapping.webp" alt="Token mapping and document sync" loading="lazy" /><figcaption>Status-to-stage mapping, and token mapping with document sync.</figcaption></figure>
+
+## Results
+
+<div class="stat">
+  <div><b>20+ → ~7</b><span>setup steps</span></div>
+  <div><b>3 → 1</b><span>windows: PandaDoc, CRM, help article</span></div>
+  <div><b>6</b><span>CRMs in one unified flow</span></div>
+</div>
 
 ## What shipped
 
