@@ -52,7 +52,8 @@ const stats = [
             <a href="https://www.linkedin.com/in/lanakachanova/" target="_blank"><svg class="ico" viewBox="0 0 24 24" width="17" height="17" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="3"/><path d="M8 11v6M8 7.5v.01M12 17v-6M12 13.5c0-1.5 1-2.5 2.5-2.5S17 12 17 13.5V17"/></svg>LinkedIn <small>↗</small></a>
           </nav>
 
-          <a class="reach" href={`mailto:${email}`}>Reach out</a>
+          <a class="reach" id="reach" href={`mailto:${email}`} data-email={email}><span class="reach-label">Reach out</span></a>
+          <p class="reach-hint">Click to copy <span>{email}</span></p>
 
           <div class="who">
             <p class="eyebrow">Who am I?</p>
@@ -73,6 +74,13 @@ const stats = [
       const el = document.getElementById('clock');
       const tick = () => { if (el) el.textContent = new Intl.DateTimeFormat('en-GB', { timeZone: 'Europe/Warsaw', hour: '2-digit', minute: '2-digit' }).format(new Date()); };
       tick(); setInterval(tick, 30000);
+      const reach = document.getElementById('reach');
+      if (reach) reach.addEventListener('click', () => {
+        const mail = reach.dataset.email || '';
+        const label = reach.querySelector('.reach-label');
+        const done = () => { if (!label) return; label.textContent = 'Email copied ✓'; setTimeout(() => { label.textContent = 'Reach out'; }, 2500); };
+        if (navigator.clipboard) navigator.clipboard.writeText(mail).then(done, () => {}); 
+      });
     </script>
   </body>
 </html>

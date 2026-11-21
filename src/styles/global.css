@@ -63,6 +63,8 @@ h1, h2, h3 { font-weight: 600; letter-spacing: -0.02em; line-height: 1.1; margin
 
 .reach { display: block; text-align: center; background: var(--text); color: var(--bg); text-decoration: none; padding: 14px 16px; border-radius: var(--radius); }
 .reach:hover { background: #3a3535; }
+.reach-hint { margin: 8px 0 0; font-family: var(--mono); font-size: 11px; letter-spacing: .02em; color: #8c8888; text-align: center; }
+.reach-hint span { user-select: all; color: var(--text); }
 .who { border-top: 1px solid var(--line); padding-top: 20px; font-size: 14px; color: var(--muted); }
 .who p:last-child { margin: 0; }
 
