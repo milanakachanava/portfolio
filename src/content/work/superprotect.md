@@ -16,7 +16,7 @@ tldr:
   result: SuperProtect reached a paid release in 9 months and won its first paying customers. In follow-up interviews, shippers were using the flags to choose carriers.
 ---
 
-<figure class="video"><video autoplay muted loop playsinline preload="metadata" poster="/work/superprotect/intro-poster.webp" aria-label="Walkthrough of SuperProtect: promo, carrier profile, passed, review and failed checks, internal records, monitored carriers and billing"><source src="/work/superprotect/intro.mp4" type="video/mp4" /></video></figure>
+<figure class="video"><video autoplay muted loop playsinline preload="metadata" poster="/work/superprotect/intro-poster.webp" aria-label="Walkthrough of SuperProtect in dark theme: promo, carrier profile, passed and failed checks, internal records, monitored carriers and billing"><source src="/work/superprotect/intro.mp4" type="video/mp4" /></video></figure>
 
 ## My role
 
