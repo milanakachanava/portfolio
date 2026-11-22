@@ -16,7 +16,7 @@ tldr:
   result: A live iOS and Android companion that brings vessel status, alerts, tasks and messaging to operators away from the desk.
 ---
 
-<figure><img src="/work/openocean-mobile/cover.webp" alt="OpenOcean Mobile: fleet, measurement tool and messages" loading="lazy" /></figure>
+<figure class="video phone"><video autoplay muted loop playsinline preload="metadata" poster="/work/openocean-mobile/intro-poster.webp" aria-label="Walkthrough of OpenOcean Mobile in dark mode: sign in, menu, alert details and activity, fleet list, vessel card, time travel slider, map settings and measuring distance"><source src="/work/openocean-mobile/intro.mp4" type="video/mp4" /></video></figure>
 
 ## My role
 
