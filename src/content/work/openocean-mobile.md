@@ -1,5 +1,5 @@
 ---
-title: Bringing fleet alerts to the phone in six months
+title: Bringing fleet alerts to the phone
 company: 90 Percent of Everything
 years: "2023"
 order: 3

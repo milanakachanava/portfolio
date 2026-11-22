@@ -3,7 +3,7 @@ title: Growing an alerts MVP into a fleet operations platform
 company: 90 Percent of Everything
 years: 2021–2025
 order: 2
-card: Three years of turning onRADAR into a live tool that connects alert triage, vessel context, tasks and messaging.
+card: Turning onRADAR from an alerts MVP into a live tool that connects alert triage, vessel context, tasks and messaging.
 tags: [Maritime, Enterprise operations, Data-dense UI]
 role: Senior Product Designer, web and desktop
 team: Cross-functional maritime product team
@@ -20,7 +20,7 @@ tldr:
 
 ## My role
 
-OOS onRADAR is a fleet monitoring, alerting and task management system for maritime operations teams. I led product design for the web and desktop solutions for more than three years, working with product owners, operators and engineers, while also working on other parts of the OpenOcean STUDIO platform.
+OOS onRADAR is a fleet monitoring, alerting and task management system for maritime operations teams. I led product design for the web and desktop solutions, working with product owners, operators and engineers, while also working on other parts of the OpenOcean STUDIO platform.
 
 ## The problem
 
@@ -134,4 +134,4 @@ A released platform that connects alert triage, vessel context, tasks and messag
 
 ## Reflection
 
-Design for the decision moment: surface the highest-value context and make the next action one click away. Three years of continuous feedback from operators were what built their trust in the product.
+Design for the decision moment: surface the highest-value context and make the next action one click away. Continuous feedback from operators was what built their trust in the product.

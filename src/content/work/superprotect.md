@@ -3,7 +3,7 @@ title: Turning scattered carrier records into a paid fraud-prevention product
 company: Super Dispatch
 years: 2025–2026
 order: 1
-card: SuperProtect went from ~20 shipper interviews to a paid release in 9 months, and replaced four sources with one carrier profile.
+card: SuperProtect went from ~20 shipper interviews to a paid release, and replaced four sources with one carrier profile.
 tags: [Trust & Safety, Marketplace, B2B SaaS]
 role: Senior Product Designer, Trust & Safety team
 team: 1 PM, 3 engineers and me
@@ -13,7 +13,7 @@ status: Released
 tldr:
   problem: Before booking a carrier, shippers cross-checked the same carrier in four places, Super Dispatch, MyCarrierPortal, Carrier411 and FMCSA, looking it up by ID each time, and still had to guess whether it was safe.
   did: I led design for the carrier profile and SuperProtect, from shipper interviews to explainable risk checks shown everywhere a carrier decision happens, and the paid product around them.
-  result: SuperProtect reached a paid release in 9 months and won its first paying customers. In follow-up interviews, shippers were using the flags to choose carriers.
+  result: SuperProtect reached a paid release and won its first paying customers. In follow-up interviews, shippers were using the flags to choose carriers.
 ---
 
 <figure class="video"><video autoplay muted loop playsinline preload="metadata" poster="/work/superprotect/intro-poster.webp" aria-label="Walkthrough of SuperProtect in dark theme: promo, carrier profile, passed and failed checks, internal records, monitored carriers and billing"><source src="/work/superprotect/intro.mp4" type="video/mp4" /></video></figure>
