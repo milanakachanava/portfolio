@@ -29,7 +29,7 @@ As Senior Product Designer I worked on the mobile companion to onRADAR and OOS w
 - Usability testing of compact list and detail patterns and offline sync flows.
 - A review of web usage analytics to pick the features that matter most on mobile.
 
-<figure><img src="/work/openocean-mobile/research-interview.webp" alt="During a remote interview, an operator holds up his phone to show the map tool he uses to check a vessel" loading="lazy" /><figcaption>From a remote interview: an operator shows how he checks a vessel on his phone today.</figcaption></figure>
+<figure class="half"><img src="/work/openocean-mobile/research-interview.webp" alt="During a remote interview, an operator holds up his phone to show the map tool he uses to check a vessel" loading="lazy" /><figcaption>From a remote interview: an operator shows how he checks a vessel on his phone today.</figcaption></figure>
 
 What we learned:
 

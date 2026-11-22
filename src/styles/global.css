@@ -183,3 +183,6 @@ h1, h2, h3 { font-weight: 600; letter-spacing: -0.02em; line-height: 1.1; margin
 .life-grid figure:hover img { filter: none; }
 .life-grid .w2 { grid-column: span 2; } .life-grid .w3 { grid-column: span 3; } .life-grid .h2 { grid-row: span 2; } .life-grid .h3 { grid-row: span 3; }
 @media (max-width: 720px) { .life-grid { grid-template-columns: 1fr 1fr; grid-auto-rows: auto; max-width: none; } .life-grid figure { grid-column: span 2; grid-row: auto; aspect-ratio: 4 / 3; } .life-grid figure.sm { grid-column: span 1; } .life-grid figure.h3 { aspect-ratio: 4 / 5; } }
+
+.prose figure.half { max-width: 50%; }
+@media (max-width: 720px) { .prose figure.half { max-width: none; } }
