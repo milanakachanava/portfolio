@@ -14,9 +14,9 @@ const cv = '/Milana_Kachanava_Senior_Product_Designer_CV.pdf';
 const email = 'milana.kachanava@gmail.com';
 
 const stats = [
-  { n: '~20', t: 'shipper interviews behind a paid fraud-prevention product' },
-  { n: '4 → 1', t: 'sources a shipper checks before booking a carrier' },
-  { n: '4', t: 'platforms for one fleet operations product: web, desktop, iOS, Android' },
+  { n: '0 → 1', t: 'new paid fraud-prevention product, from research to first paying customers' },
+  { n: '20+ → 7', t: 'steps to connect a CRM after my redesign of PandaDoc integrations' },
+  { n: '4 → 1', t: 'sources a shipper checks, merged into one carrier profile' },
 ];
 ---
 <!doctype html>
@@ -40,6 +40,8 @@ const stats = [
             <span class="role">Senior Product Designer</span>
           </a>
 
+          <p class="intro">Senior product designer with 10+ years on complex B2B products. At Super Dispatch I led <a href="/work/superprotect/">SuperProtect</a>, a new fraud-prevention product, from shipper research to a paid release. At 90 Percent of Everything I grew <a href="/work/onradar/">onRADAR</a> from an alerts MVP into a live fleet operations platform and shipped its <a href="/work/openocean-mobile/">iOS and Android app</a>. Before that: <a href="/work/pandadoc-integrations/">CRM integrations</a> at PandaDoc, enterprise products for Thomson Reuters and Schneider Electric.</p>
+
           <ul class="stats">
             {stats.map((s) => <li><b>{s.n}</b> {s.t}</li>)}
           </ul>
@@ -52,13 +54,7 @@ const stats = [
             <a href="https://www.linkedin.com/in/lanakachanova/" target="_blank"><svg class="ico" viewBox="0 0 24 24" width="17" height="17" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="3"/><path d="M8 11v6M8 7.5v.01M12 17v-6M12 13.5c0-1.5 1-2.5 2.5-2.5S17 12 17 13.5V17"/></svg>LinkedIn <small>↗</small></a>
           </nav>
 
-          <a class="reach" id="reach" href={`mailto:${email}`} data-email={email}><span class="reach-label">Reach out</span></a>
-          <p class="reach-hint">Click to copy <span>{email}</span></p>
-
-          <div class="who">
-            <p class="eyebrow">Who am I?</p>
-            <p>I turn scattered data into decisions people can act on: whom to trust, which alert to handle first, what to sync. 10+ years on complex B2B products, based in Warsaw.</p>
-          </div>
+          <button type="button" class="reach" id="reach" data-email={email} title={email}><span class="reach-label">Reach out</span></button>
         </div>
       </aside>
 
@@ -78,8 +74,9 @@ const stats = [
       if (reach) reach.addEventListener('click', () => {
         const mail = reach.dataset.email || '';
         const label = reach.querySelector('.reach-label');
-        const done = () => { if (!label) return; label.textContent = 'Email copied ✓'; setTimeout(() => { label.textContent = 'Reach out'; }, 2500); };
-        if (navigator.clipboard) navigator.clipboard.writeText(mail).then(done, () => {}); 
+        const show = (txt) => { if (!label) return; label.textContent = txt; setTimeout(() => { label.textContent = 'Reach out'; }, 2600); };
+        if (navigator.clipboard) navigator.clipboard.writeText(mail).then(() => show('Email copied ✓'), () => show(mail));
+        else show(mail);
       });
     </script>
   </body>

@@ -152,7 +152,6 @@ Tools on this project: Figma, FigJam, Figma Make, Claude, Codex, Heap.
 ## Results
 
 <div class="stat">
-  <div><b>9 mo</b><span>from start to paid release</span></div>
   <div><b>Paid</b><span>released and selling to its first customers</span></div>
   <div><b>4 → 1</b><span>sources a shipper checks before booking</span></div>
 </div>
