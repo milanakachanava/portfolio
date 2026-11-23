@@ -52,10 +52,6 @@ What a shipper needs to vet a carrier, from the interviews and the sources they 
 
 <figure><img src="/work/superprotect/shipper-interview.webp" alt="Shipper research interview reviewing carrier records" loading="lazy" /><figcaption>A shipper interview about vetting carriers, participant names blurred.</figcaption></figure>
 
-<figure class="grid2"><img src="/work/superprotect/mycarrierportal.webp" alt="Carrier profile in MyCarrierPortal with a risk assessment" loading="lazy" /><img src="/work/superprotect/fmcsa-safer.webp" alt="FMCSA SAFER company snapshot" loading="lazy" /><img src="/work/superprotect/fmcsa-licensing.webp" alt="FMCSA licensing and insurance record" loading="lazy" /><img src="/work/superprotect/authority-data.webp" alt="Carrier authority and safety data marked up during research" loading="lazy" /><figcaption>What shippers check today: MyCarrierPortal, FMCSA SAFER, FMCSA licensing and insurance, and carrier records marked up during research.</figcaption></figure>
-
-<figure><img src="/work/superprotect/carrier411.webp" alt="Carrier411 truck VIN association report with other carriers sharing the same trucks" loading="lazy" /><figcaption>Carrier411, one more source shippers checked: which other companies share the same trucks, and their authority and insurance status.</figcaption></figure>
-
 <figure><img src="/work/superprotect/inspiration.webp" alt="Inspiration board for risk and trust interfaces" loading="lazy" /><figcaption>How other products communicate trust, risk and account health.</figcaption></figure>
 
 ## Constraints and priorities
