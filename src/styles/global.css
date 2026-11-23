@@ -192,3 +192,5 @@ h1, h2, h3 { font-weight: 600; letter-spacing: -0.02em; line-height: 1.1; margin
 @media (max-width: 720px) { .prose figure.half { max-width: none; } }
 .prose figure.video.phone { max-width: 620px; margin-left: auto; margin-right: auto; }
 .prose figure.video.phone video { border: 0; background: transparent; }
+
+.ai-note { max-width: var(--read); margin: 8px 0 0; padding-top: 12px; border-top: 1px solid var(--line); font-size: 15px; }
